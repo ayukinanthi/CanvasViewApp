@@ -10,6 +10,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+
+
 import androidx.annotation.Nullable;
 import androidx.core.content.res.ResourcesCompat;
 
@@ -26,6 +28,9 @@ public class MyCanvasView extends View {
     private Bitmap mBitmap;
     //frame
     private Rect mFrame;
+
+    private int currentColor;
+    private int strokeWidth;
 
     MyCanvasView(Context context){
         this(context, null);
@@ -118,5 +123,13 @@ public class MyCanvasView extends View {
         }
         return true;
     }
-    
+    public void setColor (int color) {
+        currentColor = color;
+
+    }
+
+    public void setStrokeWidth (int width) {
+        strokeWidth = width;
+
+    }
 }
